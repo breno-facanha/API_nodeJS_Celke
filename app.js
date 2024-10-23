@@ -29,6 +29,11 @@ app.post("/users", (req, res) => {
       })
 })
 
+app.delete("/users/:id", (req, res) => {
+  let id = req.params.id
+  res.send(`id: ${id} deletado com sucesso`)
+})
+
 app.listen(8080, () => {
   console.log("servidor rodando na porta 8080");
 });
